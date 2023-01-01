@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			padding: 2rem;
+		}
+
+		table {
+			width: 40rem;
+			height: 20rem;
+			border-collapse: separate;
+			border-spacing: 0;
+		}
+
+		table,
+		table td {
+			border: 0.1rem solid black;
+		}
+
+		table tr:nth-child(1) td {
+			background-color: #088f8f;
+			color: #fff;
+		}
+
+		table tr:nth-child(2) td {
+			background-color: #f5f508;
+			color: rgb(30, 28, 28);
+		}
+
+		table tr:nth-of-type(1):hover td,
+		table tr:nth-of-type(2):hover td {
+			filter: invert(1);
+		}
+
+		.image--position,
+		.image--transform {
+			width: 200px;
+			height: 200px;
+			position: relative;
+			border-radius: 20px;
+			border: 1px solid #000000;
+			background-color: #cecece;
+		}
+
+		.image--position * {
+			position: absolute;
+		}
+
+		.image__line {
+			background-color: #000000;
+		}
+
+		.image--position .image__line1 {
+			width: 10px;
+			height: 120px;
+			left: 95px;
+			top: 20px;
+			z-index: 2;
+		}
+
+		.image--position .image__line2 {
+			width: 100px;
+			height: 10px;
+			left: 60px;
+			top: 95px;
+			z-index: 2;
+		}
+
+		.image__circle {
+			background-color: red;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			border: 1px solid #000000;
+		}
+
+		.image--position .image__circle1 {
+			left: 89px;
+			top: 10px;
+		}
+
+		.image--position .image__circle2 {
+			left: 10px;
+			top: 89px;
+		}
+
+		.image--position .image__circle3 {
+			right: 10px;
+			top: 89px;
+		}
+
+		.image--position .image__circle4 {
+			left: 89px;
+			bottom: 10px;
+		}
+
+		.image--transform .image__line1 {
+			width: 10px;
+			height: 120px;
+			transform: translateX(90px) translateY(20px);
+			z-index: 2;
+		}
+
+		.image--transform .image__line2 {
+			width: 100px;
+			height: 10px;
+			transform: translateX(60px) translateY(-20px);
+			z-index: 2;
+		}
+
+		.image--transform .image__circle1 {
+			transform: translateX(84px) translateY(-120px);
+			z-index: 1;
+		}
+
+		.image--transform .image__circle2 {
+			transform: translateX(0px) translateY(-58px);
+		}
+
+		.image--transform .image__circle3 {
+			transform: translateX(175px) translateY(-78px);
+		}
+
+		.image--transform .image__circle4 {
+			transform: translateX(84px) translateY(-35px);
+		}
+
+	</style>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td colspan="1">Окороков</td>
+			<td colspan="1">Олексій</td>
+			<td colspan="2" rowspan="2">Владиславович</td>
+			<td colspan="2"></td>
+			<td colspan="2" rowspan="2">Варіант 8</td>
+		</tr>
+		<tr>
+			<td colspan="2">ІА-03</td>
+			<td colspan="2">Лаба 2</td>
+		</tr>
+		<tr>
+			<td colspan="2"></td>
+			<td colspan="5"></td>
+		</tr>
+	</table>
+	<p>Завдання 2: position</p>
+	<div class="image--position">
+		<div class="image__line image__line1"></div>
+		<div class="image__line image__line2"></div>
+		<div class="image__circle image__circle1"></div>
+		<div class="image__circle image__circle2"></div>
+		<div class="image__circle image__circle3"></div>
+		<div class="image__circle image__circle4"></div>
+	</div>
+	<p>Завдання 2: transform</p>
+	<div class="image--transform">
+		<div class="image__line image__line1"></div>
+		<div class="image__line image__line2"></div>
+		<div class="image__circle image__circle1"></div>
+		<div class="image__circle image__circle2"></div>
+		<div class="image__circle image__circle3"></div>
+		<div class="image__circle image__circle4"></div>
+	</div>
+</body>
+
+</html>
